@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +11,37 @@
 
 <body>
 
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen">
+  <div class="lockBox">
+    <h2>💖 Private Surprise 💖</h2>
+    <input type="password" id="passInput" placeholder="Enter password">
+    <button onclick="unlock()">Open 💕</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- COUNTDOWN -->
 <div id="countScreen">
   <div id="countdown">3</div>
 </div>
 
+<!-- MAIN SCENE -->
 <div id="scene" class="hide">
 
-  <video id="video" muted>
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <!-- LEFT PHOTOS -->
+  <div id="photoArea"></div>
 
+  <!-- CENTER TEXT -->
   <div id="centerText">
     Happiest Birthday To My Love 💖<br>
     I Love You Forever
   </div>
 
-  <div id="photoArea"></div>
+  <!-- RIGHT VIDEO -->
+  <video id="video" muted autoplay loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
 
 </div>
 

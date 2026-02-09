@@ -1,3 +1,14 @@
+function unlock(){
+  const pass = document.getElementById("passInput").value;
+  const error = document.getElementById("error");
+
+  if(pass === "259$Pura"){   // change password here
+    document.getElementById("lockScreen").style.display="none";
+  }else{
+    error.innerText="Wrong password 💔";
+  }
+}
+
 window.onload = ()=>{
 
 const countdown = document.getElementById("countdown");
@@ -27,7 +38,6 @@ const timer = setInterval(()=>{
 countdown.onclick = ()=>{
   countScreen.style.display="none";
   scene.classList.remove("hide");
-
   music.play().catch(()=>{});
 
   setTimeout(()=>{
@@ -43,8 +53,9 @@ countdown.onclick = ()=>{
   },900);
 
   const imgs=[
-    "p1.jpg","p2.jpg","p3.jpg","p4.jpg","p5.jpg",
-    "p6.jpg","p7.jpg","p8.jpg","p9.jpg","p10.jpg"
+    "p1.jpg","p2.jpg","p3.jpg",
+    "p4.jpg","p5.jpg","p6.jpg",
+    "p7.jpg","p8.jpg","p9.jpg"
   ];
 
   imgs.forEach((img,i)=>{
@@ -54,7 +65,7 @@ countdown.onclick = ()=>{
       im.className="photo";
       photoArea.appendChild(im);
       setTimeout(()=>im.classList.add("show"),50);
-    },i*300);
+    },i*200);
   });
 };
 
