@@ -10,7 +10,7 @@ const bdayMusic = document.getElementById("bdayMusic");
 let num = 3;
 
 function checkPass(){
-  if(document.getElementById("pass").value !== "123@123"){
+  if(document.getElementById("pass").value !== "259"){
     alert("Wrong Password 💔");
     return;
   }
