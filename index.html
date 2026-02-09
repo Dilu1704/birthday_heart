@@ -3,50 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Love 💖</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<title>My Love ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- PASSWORD SCREEN -->
-<div id="lockScreen">
-  <div class="lockBox">
-    <h2>💖 Private Surprise 💖</h2>
-    <input type="password" id="passInput" placeholder="Enter password">
-    <button onclick="unlock()">Open 💕</button>
-    <p id="error"></p>
-  </div>
+<div id="password" class="screen">
+  <h1>💝 A Secret Surprise 💝</h1>
+  <input id="pass" type="password" placeholder="Enter Password">
+  <button onclick="checkPass()">Unlock 💖</button>
 </div>
 
-<!-- COUNTDOWN -->
-<div id="countScreen">
-  <div id="countdown">3</div>
+<!-- COUNTDOWN SCREEN -->
+<div id="countdown" class="screen hidden">
+  <img src="photos/p1.jpg">
+  <div id="count">3</div>
+  <button id="tapBtn" class="hidden" onclick="startMain()">Tap 💕</button>
 </div>
 
-<!-- MAIN SCENE -->
-<div id="scene" class="hide">
+<!-- MAIN SCREEN -->
+<div id="main" class="screen hidden">
 
   <!-- LEFT PHOTOS -->
-  <div id="photoArea"></div>
+  <div class="photos" id="photos"></div>
 
   <!-- CENTER TEXT -->
-  <div id="centerText">
-    Happiest Birthday To My Love 💖<br>
-    I Love You Forever
+  <div class="center">
+    <h1 class="line left">Happiest Birthday</h1>
+    <h1 class="line up">My Love ❤️</h1>
+    <p class="line right">I Love You Forever 💕</p>
   </div>
 
   <!-- RIGHT VIDEO -->
-  <video id="video" muted autoplay loop>
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <div class="videoBox">
+    <video src="video/love.mp4" autoplay muted playsinline></video>
+  </div>
 
 </div>
 
-<audio id="beat" src="beat.mp3"></audio>
-<audio id="music" src="song.mp3"></audio>
+<audio id="countMusic" src="music/countdown.mp3"></audio>
+<audio id="bdayMusic" src="music/birthday.mp3" loop></audio>
 
 <script src="script.js"></script>
 </body>
